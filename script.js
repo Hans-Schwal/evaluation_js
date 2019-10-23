@@ -1,4 +1,5 @@
-var regexForName = /^[A-Za-zéèîïÉÈÏÎ][a-zéèêàçîï]+([-'\s][a-zA-zéèîïÉÈÏÎ][a-zéèêàçîï]+)?$/;
+var regexForFirstName = /^[A-Za-zéèîïÉÈÏÎ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÏÎ][a-zéèêàçîï]+)?$/;
+var regexForName = /^[A-ZéèîïÉÈÏÎ]+([-'\s][A-ZéèîïÉÈÏÎ]+)?$/;
 var regexForMail = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
 var regexForAdress= /^\d+\s[A-z]+\s[A-z]+/;
 var regexForZip = /^\d{5}$/;
@@ -17,7 +18,7 @@ function validation(event){
     missFirstName.textContent = 'Prénom manquant';
     missFirstName.style.color = 'red';
     // Si le format de données saisies par l'utilisateur ne correspond pas à la regex
-  }else if (regexForName.test(firstName.value) == false){
+  }else if (regexForFirstName.test(firstName.value) == false){
     event.preventDefault();
     missFirstName.textContent = 'Format incorrect';
     missFirstName.style.color = 'orange';
@@ -81,7 +82,8 @@ function validation(event){
     missCity.textContent = 'Ville manquante';
     missCity.style.color = 'red';
     // Si le format de données saisies par l'utilisateur ne correspond pas à la regex
-  }else if (regexForName.test(city.value) == false){
+    // Utilisation de la même regex que pour le prénom
+  }else if (regexForFirstName.test(city.value) == false){
     event.preventDefault();
     missCity.textContent = 'Format incorrect';
     missCity.style.color = 'orange';
