@@ -1,0 +1,18 @@
+body{
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container{
+  background-color: white;
+  margin-top: 4%;
+}
+h1, h2{
+  text-align: center;
+  margin-bottom: 4%;
+}
+button{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 50%;
+}
