@@ -5,13 +5,14 @@ var regexForAdress= /^\d+\s[A-z]+\s[A-z]+/;
 var regexForZip = /^\d{5}$/;
 
 var formValidation = document.getElementById('button');
-var firstName = document.getElementById('firstName');
-var missFirstName = document.getElementById('missFirstName');
 
 formValidation.addEventListener('click', validation);
 
 function validation(event){
-  // vérification du champ "Prenom"
+  // Vérification du champ "Prenom"
+  // Déclarations de variables
+  var firstName = document.getElementById('firstName');
+  var missFirstName = document.getElementById('missFirstName');
   // Si le champ est vide
   if (firstName.validity.valueMissing){
     event.preventDefault();
