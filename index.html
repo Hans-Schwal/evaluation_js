@@ -13,7 +13,7 @@
     <h2>Veuillez remplir ce formulaire</h2>
     <div class="row">
       <div class="offset-3 col-6">
-        <form action="" method="post">
+        <form action="https://bienvu.net/script.php" method="post">
           <div class="form-group row">
             <label for="firstName" class="col-sm-2 col-form-label">Prenom</label>
             <div class="col-sm-10">
@@ -24,43 +24,50 @@
           <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Nom</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="name">
+              <input type="text" class="form-control" id="name" required>
+              <span id="missName"></span>
             </div>
           </div>
           <div class="form-group row">
             <label for="adress" class="col-sm-2 col-form-label">Adresse</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="adress">
+              <input type="text" class="form-control" id="adress" required>
+              <span id="missAdress"></span>
             </div>
           </div>
           <div class="form-group row">
             <label for="zip" class="col-sm-2 col-form-label">Code postal</label>
             <div class="col-sm-10">
-              <input type="zip" class="form-control" id="zip">
+              <input type="zip" class="form-control" id="zip" required>
+              <span id="missZip"></span>
             </div>
           </div>
           <div class="form-group row">
             <label for="city" class="col-sm-2 col-form-label">Ville</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="city">
+              <input type="text" class="form-control" id="city" required>
+              <span id="missCity"></span>
             </div>
           </div>
           <div class="form-group row">
             <label for="email" class="col-sm-2 col-form-label">E-mail</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="email">
+              <input type="email" class="form-control" id="email" required>
+              <span id="missEmail"></span>
             </div>
           </div>
           <div class="form-group row">
             <label for="password" class="col-sm-2 col-form-label">Mot de passe</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="password">
+              <input type="password" class="form-control" id="password" required>
+              <span id="missPassword"></span>
             </div>
           </div>
           <div class="form-group row">
-            <label for="confirmPassword" class="col-sm-2 col-form-label">confirmation mot de passe</label>
+            <label for="confirmPassword" class="col-sm-2 col-form-label">Confirmation mot de passe</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="confirmPassword">
+              <input type="password" class="form-control" id="confirmPassword" required>
+              <span id="missConfirmPassword"></span>
             </div>
           </div>
         </form>
